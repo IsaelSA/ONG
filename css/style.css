@@ -1,0 +1,1180 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f8f5;
+    color: #26332a;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+
+/* =========================================================
+   GRID PRINCIPAL - 12 COLUNAS
+========================================================= */
+
+.container {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+.cabecalho {
+    background-color: #176b3a;
+    color: #ffffff;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.cabecalho-conteudo {
+    min-height: 80px;
+    align-items: center;
+}
+
+.logo {
+    grid-column: 1 / 5;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+.logo p {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.menu {
+    grid-column: 5 / 13;
+    justify-self: end;
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    list-style: none;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 14px;
+
+    border-radius: 6px;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.menu a:hover,
+.menu a:focus {
+    background-color: #0f542c;
+}
+
+.menu-toggle {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    color: #ffffff;
+    font-size: 1.8rem;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   CONTEÚDO
+========================================================= */
+
+main {
+    min-height: 600px;
+}
+
+.secao {
+    padding: 70px 0;
+}
+
+.secao-titulo {
+    grid-column: 1 / -1;
+
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.secao-titulo h2 {
+    color: #176b3a;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.secao-titulo p {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    background-color: #dfeee4;
+    padding: 80px 0;
+}
+
+.hero-texto {
+    grid-column: 1 / 7;
+    align-self: center;
+}
+
+.hero-texto h2 {
+    color: #176b3a;
+    font-size: 2.5rem;
+    line-height: 1.2;
+
+    margin: 15px 0;
+}
+
+.hero-texto p {
+    margin-bottom: 25px;
+    max-width: 550px;
+}
+
+.hero-imagem {
+    grid-column: 7 / 13;
+    align-self: center;
+}
+
+.hero-imagem img {
+    width: 100%;
+    max-height: 420px;
+
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+/* =========================================================
+   SOBRE
+========================================================= */
+
+.sobre-texto {
+    grid-column: 1 / 8;
+    align-self: center;
+}
+
+.sobre-texto h3 {
+    color: #176b3a;
+    margin-bottom: 8px;
+}
+
+.sobre-texto p {
+    margin-bottom: 20px;
+}
+
+.sobre-imagem {
+    grid-column: 8 / 13;
+    align-self: center;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+
+/* =========================================================
+   BOTÕES
+========================================================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 12px 22px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-principal {
+    background-color: #176b3a;
+    color: #ffffff;
+}
+
+.btn-principal:hover {
+    background-color: #0f542c;
+}
+
+.btn-secundario {
+    background-color: #ffffff;
+    color: #176b3a;
+
+    border: 2px solid #176b3a;
+}
+
+.btn-secundario:hover {
+    background-color: #176b3a;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.badge {
+    display: inline-block;
+
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    background-color: #d8f0df;
+    color: #176b3a;
+
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   ALERTA
+========================================================= */
+
+.alerta {
+    grid-column: 1 / -1;
+
+    padding: 18px 20px;
+
+    border-radius: 8px;
+
+    background-color: #fff3cd;
+    color: #664d03;
+
+    border: 1px solid #ffecb5;
+}
+
+.alerta strong {
+    margin-right: 5px;
+}
+
+
+/* =========================================================
+   CONTATO
+========================================================= */
+
+.contato {
+    background-color: #e8f2eb;
+}
+
+.contato-info {
+    grid-column: 1 / 7;
+}
+
+.contato-info h3 {
+    color: #176b3a;
+    margin-bottom: 15px;
+}
+
+.contato-info p {
+    margin-bottom: 8px;
+}
+
+.contato-info a {
+    color: #176b3a;
+}
+
+.contato-info a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+.toast {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    max-width: 350px;
+
+    padding: 14px 18px;
+
+    background-color: #176b3a;
+    color: #ffffff;
+
+    border-radius: 6px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(20px);
+
+    transition: 0.3s;
+
+    z-index: 2000;
+}
+
+.toast.ativo {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+.rodape {
+    background-color: #123d26;
+    color: #ffffff;
+
+    padding-top: 40px;
+}
+
+.rodape-conteudo {
+    padding-bottom: 30px;
+}
+
+.rodape-conteudo > div {
+    grid-column: span 6;
+}
+
+.rodape h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.rodape-final {
+    background-color: #0c2d1b;
+
+    text-align: center;
+
+    padding: 18px;
+}
+
+
+/* =========================================================
+   BREAKPOINT 1 - TELAS GRANDES
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .container {
+        width: min(1100px, 92%);
+    }
+
+}
+
+
+/* =========================================================
+   BREAKPOINT 2 - NOTEBOOKS
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .hero-texto {
+        grid-column: 1 / 8;
+    }
+
+    .hero-imagem {
+        grid-column: 8 / 13;
+    }
+
+    .sobre-texto {
+        grid-column: 1 / 8;
+    }
+
+    .sobre-imagem {
+        grid-column: 8 / 13;
+    }
+
+}
+
+
+/* =========================================================
+   BREAKPOINT 3 - TABLETS
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .cabecalho-conteudo {
+        min-height: 70px;
+    }
+
+    .logo {
+        grid-column: 1 / 10;
+    }
+
+    .menu-toggle {
+        display: block;
+
+        grid-column: 10 / 13;
+        justify-self: end;
+    }
+
+    .menu {
+        grid-column: 1 / -1;
+        justify-self: stretch;
+    }
+
+    .menu ul {
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        padding: 15px;
+
+        background-color: #176b3a;
+
+        flex-direction: column;
+    }
+
+    .menu ul.ativo {
+        display: flex;
+    }
+
+    .menu li {
+        width: 100%;
+    }
+
+    .menu a {
+        text-align: center;
+    }
+
+    .hero-texto,
+    .hero-imagem,
+    .sobre-texto,
+    .sobre-imagem {
+        grid-column: 1 / -1;
+    }
+
+    .hero-imagem {
+        margin-top: 20px;
+    }
+
+    .contato-info {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* =========================================================
+   BREAKPOINT 4 - CELULARES
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .container {
+        width: 94%;
+        gap: 16px;
+    }
+
+    .secao {
+        padding: 50px 0;
+    }
+
+    .hero {
+        padding: 55px 0;
+    }
+
+    .hero-texto h2 {
+        font-size: 2rem;
+    }
+
+    .hero-imagem img {
+        max-height: 300px;
+    }
+
+    .rodape-conteudo > div {
+        grid-column: 1 / -1;
+    }
+
+    .formulario {
+        padding: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   BREAKPOINT 5 - CELULARES PEQUENOS
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .logo p {
+        font-size: 0.75rem;
+    }
+
+    .hero-texto h2 {
+        font-size: 1.7rem;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .toast {
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+
+        max-width: none;
+    }
+
+}
+
+/* =========================================================
+   PÁGINA DE PROJETOS
+========================================================= */
+
+.projetos-texto {
+    grid-column: 1 / -1;
+}
+
+.projetos-texto h3 {
+    color: #176b3a;
+    margin: 25px 0 10px;
+}
+
+.projetos-texto h3:first-child {
+    margin-top: 0;
+}
+
+.projetos-texto ul {
+    margin: 10px 0 25px 20px;
+}
+
+.projetos-texto li {
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   CARDS DE PROJETOS
+========================================================= */
+
+.projetos-grid {
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+}
+
+.card-projeto {
+    grid-column: span 4;
+
+    background-color: #ffffff;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease;
+}
+
+.card-projeto:hover {
+    transform: translateY(-4px);
+}
+
+.card-projeto img {
+    width: 100%;
+    height: 210px;
+
+    object-fit: cover;
+}
+
+.card-projeto-conteudo {
+    padding: 20px;
+}
+
+.card-projeto-conteudo h3 {
+    color: #176b3a;
+    margin-bottom: 10px;
+}
+
+.card-projeto-conteudo p {
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   BADGES DOS PROJETOS
+========================================================= */
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.badge-doacao {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.badge-voluntariado {
+    background-color: #cfe2ff;
+    color: #084298;
+}
+
+.badge-ativo {
+    background-color: #fff3cd;
+    color: #664d03;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE DOS PROJETOS
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .card-projeto {
+        grid-column: span 6;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .card-projeto {
+        grid-column: 1 / -1;
+    }
+
+    .projetos-texto {
+        grid-column: 1 / -1;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .card-projeto img {
+        height: 190px;
+    }
+
+}
+
+/* =========================================================
+   PÁGINA DE CADASTRO
+========================================================= */
+
+/* Introdução */
+
+.introducao {
+    text-align: center;
+}
+
+.introducao h2 {
+    color: #176b4d;
+    margin-bottom: 10px;
+}
+
+.introducao p {
+    color: #666;
+}
+
+
+/* Formulário */
+
+#formCadastro {
+    grid-column: 1 / -1;
+
+    background-color: #ffffff;
+
+    padding: 35px;
+
+    border-radius: 14px;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Fieldsets */
+
+#formCadastro fieldset {
+    border: 1px solid #dce5e1;
+
+    border-radius: 10px;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+}
+
+#formCadastro legend {
+    color: #176b4d;
+
+    font-size: 19px;
+
+    font-weight: bold;
+
+    padding: 0 10px;
+}
+
+
+/* Campos */
+
+.campo {
+    margin-bottom: 18px;
+}
+
+.campo label {
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 7px;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #ccd8d3;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    background-color: #ffffff;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: none;
+
+    border-color: #198754;
+
+    box-shadow: 0 0 0 3px rgba(25, 135, 84, 0.12);
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+
+/* Duas colunas */
+
+.linha {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+/* Checkbox */
+
+.checkbox {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+.checkbox input {
+    width: auto;
+
+    margin-top: 4px;
+}
+
+.checkbox label {
+    font-weight: normal;
+}
+
+
+/* Botão */
+
+.botao {
+    width: 100%;
+
+    border: none;
+
+    background: linear-gradient(
+        135deg,
+        #176b4d,
+        #198754
+    );
+
+    color: #ffffff;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.botao:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 15px rgba(23, 107, 77, 0.25);
+}
+
+
+/* Badge da área */
+
+.badge-area {
+    display: inline-block;
+
+    margin-top: 8px;
+
+    padding: 6px 12px;
+
+    border-radius: 999px;
+
+    background-color: #e8f5ee;
+
+    color: #0f5132;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   ALERTAS
+========================================================= */
+
+.alerta {
+    display: none;
+
+    grid-column: 1 / -1;
+
+    margin-bottom: 20px;
+
+    padding: 14px 16px;
+
+    border-radius: 8px;
+
+    border-left: 5px solid #198754;
+
+    background-color: #e8f5ee;
+
+    color: #0f5132;
+
+    font-weight: bold;
+}
+
+.alerta.erro {
+    border-left-color: #dc3545;
+
+    background-color: #fbe9eb;
+
+    color: #842029;
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+.toast {
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    z-index: 1000;
+
+    min-width: 280px;
+
+    max-width: 380px;
+
+    padding: 15px 18px;
+
+    border-radius: 10px;
+
+    background-color: #0f5132;
+
+    color: #ffffff;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    pointer-events: none;
+
+    transition: 0.3s;
+}
+
+.toast.mostrar {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 2000;
+
+    background-color: rgba(0, 0, 0, 0.55);
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.modal.mostrar {
+    display: flex;
+}
+
+.modal-conteudo {
+    width: 100%;
+
+    max-width: 480px;
+
+    background-color: #ffffff;
+
+    border-radius: 14px;
+
+    padding: 30px;
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+
+    text-align: center;
+}
+
+.modal-conteudo h2 {
+    color: #176b4d;
+
+    margin-bottom: 12px;
+}
+
+.modal-conteudo p {
+    color: #555;
+
+    line-height: 1.5;
+
+    margin-bottom: 22px;
+}
+
+.modal-botoes {
+    display: flex;
+
+    gap: 12px;
+}
+
+.modal-botoes button {
+    flex: 1;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    font-size: 15px;
+}
+
+.btn-confirmar {
+    background-color: #198754;
+
+    color: #ffffff;
+}
+
+.btn-cancelar {
+    background-color: #e9ecef;
+
+    color: #26352f;
+}
+
+
+/* =========================================================
+   VALIDAÇÃO DOS CAMPOS
+========================================================= */
+
+.campo.erro input,
+.campo.erro select,
+.campo.erro textarea {
+    border-color: #dc3545;
+
+    background-color: #fff8f8;
+}
+
+.mensagem-erro {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #dc3545;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    #formCadastro {
+        padding: 25px;
+    }
+
+    .linha {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    #formCadastro {
+        padding: 20px;
+    }
+
+    #formCadastro fieldset {
+        padding: 18px;
+    }
+
+    .toast {
+        left: 20px;
+
+        right: 20px;
+
+        bottom: 20px;
+
+        min-width: auto;
+    }
+
+    .modal-botoes {
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    #formCadastro {
+        padding: 15px;
+    }
+
+    #formCadastro fieldset {
+        padding: 15px;
+    }
+
+    .modal-conteudo {
+        padding: 22px;
+    }
+
+}
