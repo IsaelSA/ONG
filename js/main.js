@@ -91,7 +91,6 @@ function mostrarToast(mensagem) {
 
 window.mostrarToast = mostrarToast;
 
-
 // =========================================================
 // LOG DE TESTE
 // =========================================================
